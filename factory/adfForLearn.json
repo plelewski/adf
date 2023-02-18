@@ -1,0 +1,9 @@
+{
+	"name": "adfForLearn",
+	"location": "germanywestcentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5fcacdb7-6877-4624-9b32-ec23416e423d",
+		"tenantId": "2145095f-61bc-4711-9fe6-27d0a9e4438f"
+	}
+}
