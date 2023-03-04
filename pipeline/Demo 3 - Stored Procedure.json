@@ -72,7 +72,7 @@
 						},
 						"RecordInsertDate": {
 							"value": {
-								"value": "@convertToUtc(utcnow(),'Eastern Standard Time')",
+								"value": "@convertFromUtc(utcnow(),'Central European Standard Time')",
 								"type": "Expression"
 							},
 							"type": "DateTime"
