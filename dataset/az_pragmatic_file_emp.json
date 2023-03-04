@@ -1,5 +1,5 @@
 {
-	"name": "az_pragmatic_employee",
+	"name": "az_pragmatic_file_emp",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage1",

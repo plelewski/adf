@@ -52,13 +52,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_bll",
+						"referenceName": "az_pragmatic_db_emp",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "az_pragmatic_employee",
+						"referenceName": "az_pragmatic_file_emp",
 						"type": "DatasetReference"
 					}
 				]
