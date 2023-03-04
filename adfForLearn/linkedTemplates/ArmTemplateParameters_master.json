@@ -11,6 +11,9 @@
 		"AzureTableStorage1_connectionString": {
 			"value": ""
 		},
+		"az_sqldb_pragmatic_connectionString": {
+			"value": ""
+		},
 		"containerUri": {
 			"value": ""
 		},
