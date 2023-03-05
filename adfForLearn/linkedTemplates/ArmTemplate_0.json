@@ -695,7 +695,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"expression": {
-								"value": "@greaterOrEquals(\nactivity('Get Metadata Last Modified Date').output.lastModified,\nactivity('Lookup LED').output.firstRow\n)",
+								"value": "@greaterOrEquals(\nactivity('Get Metadata Last Modified Date').output.lastModified,\nactivity('Lookup LED').output.firstRow.ExecutionDate\n)",
 								"type": "Expression"
 							},
 							"ifFalseActivities": [
