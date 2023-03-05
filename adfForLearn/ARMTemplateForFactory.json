@@ -444,7 +444,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"expression": {
-								"value": "@greater(\nformatDateTime(activity('Get Metadata LMD').output.lastModified),\nformatDateTime(activity('Lookup LED').output.firstRow.ExecutionDate)\n)",
+								"value": "@greaterOrEquals(\nformatDateTime(activity('Get Metadata LMD').output.lastModified),\nformatDateTime(activity('Lookup LED').output.firstRow.ExecutionDate)\n)",
 								"type": "Expression"
 							},
 							"ifFalseActivities": [
@@ -476,7 +476,7 @@
 										"storedProcedureParameters": {
 											"ExecutionDate": {
 												"value": {
-													"value": "@activity('Get Metadata LMD').output.lastModified",
+													"value": "@pipeline().TriggerTime",
 													"type": "Expression"
 												},
 												"type": "DateTime"
