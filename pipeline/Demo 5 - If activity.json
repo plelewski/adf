@@ -89,7 +89,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@greater(\nactivity('Get Metadata Last Modified Date').output.lastModified,\nactivity('Lookup LED').output.firstRow.ExecutionDate\n)",
+						"value": "@greater(\nformatDateTime(activity('Get Metadata LMD').output.lastModified),\nactivity('Lookup LED').output.firstRow.ExecutionDate\n)",
 						"type": "Expression"
 					},
 					"ifFalseActivities": [
