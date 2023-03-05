@@ -61,7 +61,7 @@
 							"Name": {
 								"type": "String",
 								"value": {
-									"value": "@activity('Get Metadata Last Modified Date').output.itemName",
+									"value": "@activity('Get Metadata LMD').output.itemName",
 									"type": "Expression"
 								}
 							}
