@@ -76,7 +76,7 @@
 				}
 			},
 			{
-				"name": "If Condition1",
+				"name": "If Condition Test Dates",
 				"type": "IfCondition",
 				"dependsOn": [
 					{
@@ -86,7 +86,35 @@
 						]
 					}
 				],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@greaterOrEquals(\nactivity('Get Metadata Last Modified Date').output.lastModified,\nactivity('Lookup LED').output.firstRow\n)",
+						"type": "Expression"
+					},
+					"ifFalseActivities": [
+						{
+							"name": "false",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 1
+							}
+						}
+					],
+					"ifTrueActivities": [
+						{
+							"name": "true",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 1
+							}
+						}
+					]
+				}
 			}
 		],
 		"annotations": []
