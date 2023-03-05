@@ -121,7 +121,7 @@
 								"storedProcedureParameters": {
 									"ExecutionDate": {
 										"value": {
-											"value": "@activity('Get Metadata Last Modified Date').output.lastModified",
+											"value": "@activity('Get Metadata LMD').output.lastModified",
 											"type": "Expression"
 										},
 										"type": "DateTime"
