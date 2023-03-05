@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Get Metadata Last Modified Date",
+				"name": "Get Metadata LMD",
 				"type": "GetMetadata",
 				"dependsOn": [],
 				"policy": {
@@ -39,7 +39,7 @@
 				"type": "Lookup",
 				"dependsOn": [
 					{
-						"activity": "Get Metadata Last Modified Date",
+						"activity": "Get Metadata LMD",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -89,7 +89,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@greaterOrEquals(\nactivity('Get Metadata Last Modified Date').output.lastModified,\nactivity('Lookup LED').output.firstRow.ExecutionDate\n)",
+						"value": "@greater(\nactivity('Get Metadata Last Modified Date').output.lastModified,\nactivity('Lookup LED').output.firstRow.ExecutionDate\n)",
 						"type": "Expression"
 					},
 					"ifFalseActivities": [
