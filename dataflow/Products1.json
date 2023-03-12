@@ -81,7 +81,13 @@
 				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError') ~> destTable"
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          id = PRODUCT_ID,",
+				"          name = NAME,",
+				"          price = PRICE,",
+				"          shop = SHOP",
+				"     )) ~> destTable"
 			]
 		}
 	}
