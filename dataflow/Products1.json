@@ -42,7 +42,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> place",
-				"all, place join(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
+				"all, place join(all@PRODUCT_ID == place@PRODUCT_ID,",
 				"     joinType:'inner',",
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
