@@ -20,10 +20,21 @@
 					"name": "place"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					},
+					"name": "destTable"
+				}
+			],
 			"transformations": [
 				{
 					"name": "allColumns"
+				},
+				{
+					"name": "removeDuplicateColumns"
 				}
 			],
 			"scriptLines": [
@@ -46,7 +57,31 @@
 				"     joinType:'inner',",
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
-				"     broadcast: 'auto')~> allColumns"
+				"     broadcast: 'auto')~> allColumns",
+				"allColumns select(mapColumn(",
+				"          PRODUCT_ID = all@PRODUCT_ID,",
+				"          NAME,",
+				"          PRICE,",
+				"          SHOP",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> removeDuplicateColumns",
+				"removeDuplicateColumns sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          id as integer,",
+				"          name as string,",
+				"          price as integer,",
+				"          shop as string",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> destTable"
 			]
 		}
 	}
