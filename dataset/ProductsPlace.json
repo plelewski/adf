@@ -20,9 +20,11 @@
 		},
 		"schema": [
 			{
+				"name": "PRODUCT_ID",
 				"type": "String"
 			},
 			{
+				"name": "SHOP",
 				"type": "String"
 			}
 		]

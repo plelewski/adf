@@ -20,12 +20,15 @@
 		},
 		"schema": [
 			{
+				"name": "PRODUCT_ID",
 				"type": "String"
 			},
 			{
+				"name": "NAME",
 				"type": "String"
 			},
 			{
+				"name": "PRICE",
 				"type": "String"
 			}
 		]
